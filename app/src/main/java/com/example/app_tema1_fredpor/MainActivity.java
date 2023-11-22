@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.provider.AlarmClock;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -18,9 +19,19 @@ import java.util.Calendar;
 public class MainActivity extends AppCompatActivity {
 
 
+
     @Override
     protected void  onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button botonStart = findViewById(R.id.botonEntrar);
+        botonStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, menu.class);
+                startActivity(intent);
+            }
+        });
     }
 }

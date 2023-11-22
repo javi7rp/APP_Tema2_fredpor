@@ -1,0 +1,19 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Fondo de color 1 -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="@color/azul_arriba" />
+        </shape>
+    </item>
+
+    <!-- Fondo de color 2 -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:endColor="@color/azul_abajo" />
+        </shape>
+    </item>
+
+</layer-list>

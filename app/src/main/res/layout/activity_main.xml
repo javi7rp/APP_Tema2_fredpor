@@ -12,8 +12,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         app:srcCompat="@drawable/messi" />
 
 
@@ -62,12 +62,9 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/botonSubmit"
+        android:id="@+id/botonEntrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enviar" />
-
-
-
+        android:text="ENTRAR" />
 
 </LinearLayout>

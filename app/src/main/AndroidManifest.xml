@@ -35,7 +35,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SecondActivity"
+            android:name=".menu"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.APP_Tema1_fredpor">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".dados"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.APP_Tema1_fredpor">

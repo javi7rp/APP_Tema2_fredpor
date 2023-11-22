@@ -8,4 +8,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="white_blue">#679AF3</color>
+    <color name="gris">#808080</color>
+    <color name="azul_abajo">#1367CD</color>
+    <color name="azul_arriba">#104A8F</color>
+    <color name="jugador_1">#87CEFA</color>
+    <color name="jugador_2">#DC143C</color>
+    <color name="victoria">#008000</color>
+    <color name="derrota">#778899</color>
 </resources>

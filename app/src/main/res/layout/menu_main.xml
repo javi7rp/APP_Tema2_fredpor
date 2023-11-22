@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white_blue"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/section1"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@drawable/fondo_arriba"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            tools:srcCompat="@tools:sample/avatars"
+            />
+
+        <TextView
+            android:id="@+id/texto1"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Javier Redondo" />
+
+        <TextView
+            android:id="@+id/texto2"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="BIENVENIDO A LA PAGINA PRINCIPAL"
+            android:gravity="center"
+            android:layout_below="@+id/texto1"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/section2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        >
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            tools:ignore="MissingConstraints">
+            <TableRow>
+                <ImageButton
+                    android:id="@+id/botonLLamada"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/llamada_telefonica"
+                    android:background="@drawable/forma_boton"/>
+                <ImageButton
+                    android:id="@+id/botonDados"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/dado2cara6"
+                    android:background="@drawable/forma_boton"/>
+                <ImageButton
+                    android:id="@+id/botonMaps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/maps"
+                    android:background="@drawable/forma_boton"/>
+
+            </TableRow>
+
+            <!-- TableRow 2 -->
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LLAMADA"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DADOS"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MAPS"
+                    android:gravity="center"/>
+            </TableRow>
+            <TableRow>
+                <ImageButton
+                    android:id="@+id/botonModdle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/moddle"
+                    android:background="@drawable/forma_boton"/>
+                <ImageButton
+                    android:id="@+id/botonChistes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/risa"
+                    android:background="@drawable/forma_boton"/>
+                <ImageButton
+                    android:id="@+id/botonAlarma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/alarma"
+                    android:background="@drawable/forma_boton"/>
+
+            </TableRow>
+
+            <!-- TableRow 2 -->
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MODDLE"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CHISTES"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ALARMA"
+                    android:gravity="center"/>
+            </TableRow>
+
+        </TableLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/section3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+
+        <TableLayout
+            android:id="@+id/tableLayout2"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            tools:ignore="MissingConstraints"
+            android:background="@drawable/fondo_abajo"
+            >
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/texto3"
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:gravity="center|center"
+                    android:text="THE MESSI STORE"
+                    tools:ignore="MissingConstraints" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    tools:ignore="MissingConstraints"
+                    tools:srcCompat="@drawable/logo_messi" />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</LinearLayout>
