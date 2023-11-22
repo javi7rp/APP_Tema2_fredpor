@@ -122,15 +122,16 @@ public class dados extends AppCompatActivity{
                         solder.setVisibility(View.VISIBLE);
                     }
                 }, 7000);
-
-
-
-
             }
         });
 
-
-
+        volverMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(dados.this, menu.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
