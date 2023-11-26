@@ -34,10 +34,10 @@
             android:text="Javier Redondo" />
 
         <TextView
-            android:id="@+id/texto2"
+            android:id="@+id/textoBienvenida"
             android:layout_width="150dp"
             android:layout_height="50dp"
-            android:text="BIENVENIDO A LA PAGINA PRINCIPAL"
+            android:text=" "
             android:gravity="center"
             android:layout_below="@+id/texto1"/>
 
