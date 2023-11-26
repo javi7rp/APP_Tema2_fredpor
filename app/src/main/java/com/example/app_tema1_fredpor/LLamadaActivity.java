@@ -20,6 +20,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 public class LLamadaActivity extends AppCompatActivity {
+    /*
     private ImageButton botonRealizarLLamada;
     private final int REQUEST_CODE_LLAMADA = 1;
     @Override
@@ -78,5 +79,5 @@ public class LLamadaActivity extends AppCompatActivity {
             default:
                 super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         }
-    }
+    }*/
 }

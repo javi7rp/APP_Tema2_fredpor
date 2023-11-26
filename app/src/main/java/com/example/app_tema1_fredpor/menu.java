@@ -43,6 +43,7 @@ public class menu extends AppCompatActivity {
         ImageButton botonModdle = findViewById(R.id.botonModdle);
         ImageButton botonMaps = findViewById(R.id.botonMaps);
         ImageButton botonLLamada = findViewById(R.id.botonLLamada);
+        ImageButton botonChistes = findViewById(R.id.botonChistes);
         botonDados.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,12 +51,20 @@ public class menu extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+/*
         botonLLamada.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "BOTON DE LLAMADA PULSADO", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(menu.this, LLamadaActivity.class);
+                startActivity(intent);
+            }
+        });*/
+
+        botonChistes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(menu.this, chistes.class);
                 startActivity(intent);
             }
         });

@@ -5,8 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_jugadores"
-    tools:context=".MainActivity">
+    android:background="@drawable/fondo_jugadores">
 
 
     <Button
@@ -22,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal"
-        android:layout_marginTop="50dp">
+        android:layout_marginTop="20dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -110,8 +109,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="50dp">
+        android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/solucionIzq"
