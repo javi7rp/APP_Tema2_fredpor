@@ -23,7 +23,7 @@
             android:id="@+id/imageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            tools:srcCompat="@drawable/avatar_messi"
+            android:src="@drawable/avatar_messi"
             android:background="@drawable/fondo_arriba"
             />
 
@@ -45,6 +45,23 @@
 
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+
+        <ProgressBar
+            android:id="@+id/ProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/progress_bar_color"
+            android:visibility="visible"/>
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/section2"
@@ -52,6 +69,7 @@
         android:layout_height="0dp"
         android:layout_weight="2"
         android:gravity="center"
+
         >
 
         <TableLayout
@@ -59,7 +77,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:stretchColumns="*"
-            tools:ignore="MissingConstraints">
+            tools:ignore="MissingConstraints"
+            android:visibility="invisible"
+            >
             <TableRow>
                 <ImageButton
                     android:id="@+id/botonLLamada"
@@ -67,7 +87,8 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/llamada_telefonica"
                     android:background="@drawable/forma_boton"
-                    android:text="boton para realizar una llamada"/>
+                    android:text="boton para realizar una llamada"
+                    />
                 <ImageButton
                     android:id="@+id/botonDados"
                     android:layout_width="wrap_content"

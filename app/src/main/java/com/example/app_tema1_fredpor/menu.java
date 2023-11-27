@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.provider.AlarmClock;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,6 +13,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,13 +26,15 @@ import java.util.Calendar;
 
 public class menu extends AppCompatActivity {
 
+    private ProgressBar ProgressBar;
+    private int progressStatus = 0;
+    private Handler handler = new Handler();
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         /*
         LayoutInflater inflater = getLayoutInflater();
         View view = inflater.inflate(R.layout.activity_main, null);
         EditText text_user = view.findViewById(R.id.textUser);
         String user = text_user.getText().toString();
-        Toast.makeText(getApplicationContext(), "Este es un mensaje por pantalla" + user, Toast.LENGTH_SHORT).show();
         String txtBienvenida = "BIENVENIDO A LA PAGINA PRINCIPAL ";
         String txtFinal = txtBienvenida + user;
         TextView textView = findViewById(R.id.textoBienvenida);
@@ -44,6 +50,37 @@ public class menu extends AppCompatActivity {
         ImageButton botonMaps = findViewById(R.id.botonMaps);
         ImageButton botonLLamada = findViewById(R.id.botonLLamada);
         ImageButton botonChistes = findViewById(R.id.botonChistes);
+        TableLayout tableLayout = findViewById(R.id.tableLayout);
+        ProgressBar = findViewById(R.id.ProgressBar);
+
+
+        new Thread(new Runnable() {
+            public void run() {
+                while (progressStatus < 100) {
+                    progressStatus += 1;
+                    handler.post(new Runnable() {
+                        public void run() {
+                            ProgressBar.setProgress(progressStatus);
+                        }
+                    });
+                    try {
+                        Thread.sleep(50);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+                tableLayout.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        ProgressBar.setVisibility(View.INVISIBLE);
+                       tableLayout.setVisibility(View.VISIBLE);
+                    }
+                });
+            }
+        }).start();
+
+
         botonDados.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,15 +88,13 @@ public class menu extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-/*
         botonLLamada.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "BOTON DE LLAMADA PULSADO", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(menu.this, LLamadaActivity.class);
                 startActivity(intent);
             }
-        });*/
+        });
 
         botonChistes.setOnClickListener(new View.OnClickListener() {
             @Override

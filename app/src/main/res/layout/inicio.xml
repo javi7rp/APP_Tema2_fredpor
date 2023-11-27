@@ -16,14 +16,37 @@
         android:layout_height="200dp"
         app:srcCompat="@drawable/messi" />
 
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/text_autor"
-        android:layout_width="match_parent"
-        android:layout_height="89dp"
-        android:gravity="center"
-        android:text="@string/autor_name"
-        android:textSize="20dp" />
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/btr_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="HOMBRE" />
+
+            <RadioButton
+                android:id="@+id/btr_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MUJER" />
+        </RadioGroup>
+
+        <Switch
+            android:id="@+id/switch_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:text="NO SOY UN ROBOT"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -60,6 +83,13 @@
             android:width="200px"/>
 
     </LinearLayout>
+    <CheckBox
+        android:id="@+id/check_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="ACEPTO LAS CONDICIONES" />
 
     <Button
         android:id="@+id/botonEntrar"
