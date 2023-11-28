@@ -7,12 +7,14 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.AlarmClock;
+import android.service.autofill.UserData;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TableLayout;
@@ -30,19 +32,37 @@ public class menu extends AppCompatActivity {
     private int progressStatus = 0;
     private Handler handler = new Handler();
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        /*
-        LayoutInflater inflater = getLayoutInflater();
-        View view = inflater.inflate(R.layout.activity_main, null);
-        EditText text_user = view.findViewById(R.id.textUser);
-        String user = text_user.getText().toString();
-        String txtBienvenida = "BIENVENIDO A LA PAGINA PRINCIPAL ";
-        String txtFinal = txtBienvenida + user;
-        TextView textView = findViewById(R.id.textoBienvenida);
-        textView.setText(user);
-
-         */
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_main);
+        ImageView imagenPerfil = findViewById(R.id.imagenPerfil);
+        TextView textoBienvenida = findViewById(R.id.textoBienvenida);
+
+        //inicio ini = new inicio();
+        //Usuario user = ini.getUsuario();
+
+
+        String sexo = usuario.getUserSex();
+        String sexo = "H";
+
+
+        //a partir de aqui funciona
+        switch (sexo){
+            case "H":
+                imagenPerfil.setImageResource(R.drawable.avatar_messi);
+                break;
+            case "M":
+                imagenPerfil.setImageResource(R.drawable.mujer);
+                break;
+            case "O":
+                imagenPerfil.setImageResource(R.drawable.otro);
+                break;
+        }
+        //String userName = user.getUserName();
+        //textoBienvenida.setText(userName.toUpperCase());
+
+
+
+
 
         ImageButton botonDados = findViewById(R.id.botonDados);
         ImageButton botonAlarma = findViewById(R.id.botonAlarma);

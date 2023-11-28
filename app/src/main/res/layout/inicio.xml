@@ -27,16 +27,21 @@
             android:layout_height="wrap_content">
 
             <RadioButton
-                android:id="@+id/btr_1"
+                android:id="@+id/btr_hombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="HOMBRE" />
 
             <RadioButton
-                android:id="@+id/btr_2"
+                android:id="@+id/btr_mujer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="MUJER" />
+            <RadioButton
+                android:id="@+id/btr_otro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OTRO" />
         </RadioGroup>
 
         <Switch
@@ -62,6 +67,7 @@
             android:id="@+id/textUser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="messi"
             android:width="200px" />
 
     </LinearLayout>
@@ -80,11 +86,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
+            android:text="123"
             android:width="200px"/>
 
     </LinearLayout>
     <CheckBox
-        android:id="@+id/check_1"
+        android:id="@+id/check_condiciones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
