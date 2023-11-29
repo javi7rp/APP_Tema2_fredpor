@@ -67,7 +67,8 @@
             android:id="@+id/textUser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:width="200px" />
+            android:width="200px"
+            android:text="ejemplo"/>
 
     </LinearLayout>
     <LinearLayout
@@ -85,7 +86,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:width="200px"/>
+            android:width="200px"
+            android:text="ejemplo"/>
 
     </LinearLayout>
     <CheckBox
