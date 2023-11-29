@@ -16,6 +16,7 @@ public class Usuario {
         public String getUserName() {
                 return userName;
         }
+        public String getUserPass() {return userPass;}
 
         public String getUserSex() {
                 return userSex;
@@ -24,7 +25,7 @@ public class Usuario {
         @NonNull
         @Override
         public String toString() {
-                return "User: " + userName + " Pass: " +userPass+ " Sexo: " + userSex;
+                return "Usuario: " + userName + " Contraseña: " +userPass;
         }
 }
 

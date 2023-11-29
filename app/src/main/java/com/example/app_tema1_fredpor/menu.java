@@ -35,30 +35,36 @@ public class menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_main);
         ImageView imagenPerfil = findViewById(R.id.imagenPerfil);
+        ImageView imagenFooter = findViewById(R.id.imagenFooter);
         TextView textoBienvenida = findViewById(R.id.textoBienvenida);
-
-        //inicio ini = new inicio();
-        //Usuario user = ini.getUsuario();
+        TextView textoFooter = findViewById(R.id.textoFooter);
 
 
-        String sexo = usuario.getUserSex();
-        String sexo = "H";
+        Usuario usuario = inicio.getUsuario();
+        String userName = usuario.getUserName();
+        String userSex = usuario.getUserSex();
+        //Toast.makeText(getApplicationContext(), usuario.toString() , Toast.LENGTH_SHORT).show(); //para mostrar el usuario cuando entre
 
 
         //a partir de aqui funciona
-        switch (sexo){
+        switch (userSex){
             case "H":
                 imagenPerfil.setImageResource(R.drawable.avatar_messi);
+                imagenFooter.setImageResource(R.drawable.messi_store);
+                textoFooter.setText("THE MESSI STORE");
                 break;
             case "M":
                 imagenPerfil.setImageResource(R.drawable.mujer);
+                imagenFooter.setImageResource(R.drawable.shein);
+                textoFooter.setText("SHEIN");
                 break;
             case "O":
                 imagenPerfil.setImageResource(R.drawable.otro);
+                imagenFooter.setImageResource(R.drawable.orapma);
+                textoFooter.setText("ORAPMA PELUQUEROS DIGAME");
                 break;
         }
-        //String userName = user.getUserName();
-        //textoBienvenida.setText(userName.toUpperCase());
+        textoBienvenida.setText(userName.toUpperCase());
 
 
 

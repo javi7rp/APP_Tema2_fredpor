@@ -4,6 +4,7 @@ package com.example.app_tema1_fredpor;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -18,7 +19,10 @@ import androidx.appcompat.app.AppCompatActivity;
 public class inicio extends AppCompatActivity {
     private boolean checkRadio = false;
     private boolean checkCheckbox = false;
-    public Usuario usuario;
+    private static Usuario usuario;
+    private static String userName;
+    private static String userPass;
+    private static String userSex = "";
 
     @Override
     protected void  onCreate (Bundle savedInstanceState) {
@@ -33,8 +37,6 @@ public class inicio extends AppCompatActivity {
         EditText textUser = findViewById(R.id.textUser);
         EditText textPass = findViewById(R.id.textPassword);
 
-        String userName = textUser.getText().toString();
-        String userPass = textPass.getText().toString();
 
 
 
@@ -59,27 +61,30 @@ public class inicio extends AppCompatActivity {
             @SuppressLint("ResourceType")
             @Override
             public void onClick(View v) {
+                userName = textUser.getText().toString();
+                userPass = textPass.getText().toString();
                 if (checkCheckbox && checkRadio){
-                    int radioCheckedId = radioGroup.getCheckedRadioButtonId();
-                    switch (radioCheckedId){
-                        case 2131230828: //id del boton1
-                            usuario = new Usuario(userName, userPass, "H");
-                            Toast.makeText(getApplicationContext(), usuario.toString(), Toast.LENGTH_SHORT).show();
-                            break;
-                        case 2131230829://id del boton2
-                            usuario = new Usuario(userName, userPass, "M");
-                            Toast.makeText(getApplicationContext(), usuario.toString(), Toast.LENGTH_SHORT).show();
-                            break;
-                        case 2131230830://id del boton3
-                            usuario = new Usuario(userName, userPass, "O");
-                            Toast.makeText(getApplicationContext(), usuario.toString(), Toast.LENGTH_SHORT).show();
-                            break;
-                        default:
-                            Toast.makeText(getApplicationContext(), radioGroup.getCheckedRadioButtonId(), Toast.LENGTH_SHORT).show();
-                    }
+                    if(!TextUtils.isEmpty(userName) && !TextUtils.isEmpty(userPass)){
+                        int radioCheckedId = radioGroup.getCheckedRadioButtonId();
+                        switch (radioCheckedId){
+                            case 2131230828: //id del boton1
+                                userSex = "H";
+                                break;
+                            case 2131230829://id del boton2
+                                userSex = "M";
 
-                    //Intent intent = new Intent(inicio.this, menu.class);
-                    //startActivity(intent);
+                                break;
+                            case 2131230830://id del boton3
+                                userSex = "O";
+                                break;
+                            default:
+                                Toast.makeText(getApplicationContext(), radioGroup.getCheckedRadioButtonId(), Toast.LENGTH_SHORT).show();
+                        }
+                        Intent intent = new Intent(inicio.this, menu.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(getApplicationContext(), "DEBES INTRODUCIR USUARIO Y CONTRASEÑA", Toast.LENGTH_SHORT).show();
+                    }
 
                 }else{
                     Toast.makeText(getApplicationContext(), "DEBES SELECCIONAR EL SEXO Y ACEPTAR LAS CONDICICONES", Toast.LENGTH_SHORT).show();
@@ -88,7 +93,9 @@ public class inicio extends AppCompatActivity {
         });
 
     }
-    public Usuario obtenerUser(){
-        return usuario;
+    public static Usuario getUsuario(){
+        return usuario = new Usuario(userName, userPass, userSex);
     }
+
+
 }

@@ -41,7 +41,7 @@ public class chistes extends AppCompatActivity implements TextToSpeech.OnInitLis
                         "PACO, dime algo que me haga sentir muy perra\nSIT MARIA, SIT",
                         "¿Por qué los programadores prefieren el verano?\nPorque les gusta tener ventanas abiertas.",
                         "¿Cuántos programadores se necesitan para cambiar una bombilla?\nNinguno, es un problema de hardware.",
-                        "Papa, papa, porque me echas güacamole por encima?\nque te calles nacho",
+                        "Papá, papá, porque me echas güacamole por encima?\nque te calles nacho",
                         "¿Cuál es el lenguaje favorito de los programadores?\nEl lenguaje de señas.",
                         "POR EL CULO NO PACO, POR EL CULO NO\nPues ya me diras tu manolo...",
                         "Mire doctor, esque solo oigo por un oido, por el otro no\nNo oye por un oido? a ver diga 100\n50",
