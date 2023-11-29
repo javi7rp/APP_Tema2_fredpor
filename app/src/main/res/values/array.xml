@@ -1,0 +1,8 @@
+<resources>
+    <string-array name="spinner_items_array">
+        <item>TODOS</item>
+        <item>JAIMITO</item>
+        <item>INFORMATICOS</item>
+        <item>DOCTOR</item>
+    </string-array>
+</resources>
