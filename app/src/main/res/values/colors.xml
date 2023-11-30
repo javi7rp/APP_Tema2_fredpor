@@ -15,5 +15,6 @@
     <color name="jugador_2">#DC143C</color>
     <color name="victoria">#008000</color>
     <color name="green">#0FD80F</color>
+    <color name="progresBar">#06319C</color>
     <color name="derrota">#778899</color>
 </resources>

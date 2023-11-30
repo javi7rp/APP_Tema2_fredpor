@@ -18,22 +18,24 @@
         android:layout_width="wrap_content"
         android:layout_height="100dp"
         >
+
+        <Spinner
+            android:id="@+id/elegirTema"
+            android:layout_width="190dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="50dp"
+            android:entries="@array/spinner_items_array"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown" />
         <Button
             android:id="@+id/generarChiste"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="140dp"
             android:layout_marginTop="50dp"
             android:text="GENERAR CHISTE" />
 
-        <Spinner
-            android:id="@+id/elegirTema"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="50dp"
-            android:entries="@array/spinner_items_array"
-            android:background="@android:drawable/btn_dropdown"
-            android:spinnerMode="dropdown" />
+
 
     </LinearLayout>
 

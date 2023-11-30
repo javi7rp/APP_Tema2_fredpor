@@ -1,6 +1,6 @@
 <resources>
     <string-array name="spinner_items_array">
-        <item>TODOS</item>
+        <item>RANDOM</item>
         <item>JAIMITO</item>
         <item>INFORMATICOS</item>
         <item>DOCTOR</item>
