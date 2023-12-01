@@ -19,7 +19,7 @@ import androidx.core.content.ContextCompat
 class LLamadaActivity : AppCompatActivity() {
 
     private lateinit var botonRealizarLLamada: ImageButton
-    private val REQUEST_CODE_LLAMADA = 101
+    private val REQUEST_CODE_LLAMADA = 1
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

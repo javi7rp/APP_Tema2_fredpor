@@ -28,6 +28,10 @@
             android:exported="true"
             android:label="Patalla de Inicio"
             android:theme="@style/Theme.APP_Tema1_fredpor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
         <activity
@@ -53,10 +57,7 @@
             android:exported="true"
             android:label="Patalla de Inicio"
             android:theme="@style/Theme.APP_Tema1_fredpor">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
     </application>
 
