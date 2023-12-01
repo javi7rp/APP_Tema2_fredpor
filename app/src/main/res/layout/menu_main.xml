@@ -7,7 +7,7 @@
     android:background="@color/white_blue"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".menu">
+    tools:context=".Menu">
 
     <LinearLayout
         android:id="@+id/section1"
