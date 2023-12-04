@@ -10,9 +10,10 @@
     tools:context=".LLamadaActivity">
 
     <TextView
+        android:id="@+id/textoLLamada"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LLAMAR"
+        android:text="LLAMAR AL 112"
         android:textSize="30dp"
         />
 
